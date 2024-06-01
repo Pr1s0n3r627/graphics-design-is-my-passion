@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Comic+Neue:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+    text-align: center;
+    background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00, #ff0000, #00ff00, #0000ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s infinite;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #ff00ff;
+    font-size: 20px;
+    margin-top: 200px;
+    text-shadow: 4px 4px 0 #0000ff, -4px -4px 0 #00ff00, 4px -4px 0 #ff0000, -4px 4px 0 #ffff00;
+    transform: rotate(-15deg) skewX(-15deg) scale(1.5);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: textAnimation 1s infinite alternate, colorShift 2s infinite alternate;
+}
+
+@keyframes textAnimation {
+    0%, 100% { transform: rotate(-15deg) skewX(-15deg) scale(1.5); }
+    50% { transform: rotate(15deg) skewX(15deg) scale(1.8); }
+}
+
+@keyframes colorShift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+img {
+    margin-top: 150px;
+    border: 15px dotted #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px #000;
+    transform: rotate(30deg) scale(1.2);
+    animation: imgAnimation 2s infinite alternate, imgColorShift 5s infinite alternate;
+}
+
+@keyframes imgAnimation {
+    0%, 100% { transform: rotate(30deg) scale(1.2); }
+    50% { transform: rotate(-30deg) scale(1.5); }
+}
+
+@keyframes imgColorShift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
